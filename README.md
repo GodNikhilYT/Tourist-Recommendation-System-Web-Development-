@@ -25,5 +25,5 @@ Your page after login.
 
 
 
-![Image](https://github.com/user-attachments/assets/cbfad1fa-da3a-4676-aae4-03dc342fdd52)
+![Image](https://github.com/user-attachments/assets/ab1544d9-3509-46c6-ae57-f6d4536aa2ef)
 
