@@ -9,9 +9,5 @@ friendly experience.
 ![Image](https://github.com/user-attachments/assets/163cd0a4-be19-4b9e-afd2-40d54bd8b9b6)
 
 ## STEP 1:
-
-
-
-
-
+Register page when visiting the website for the first time.
 ![Image](https://github.com/user-attachments/assets/50966f39-2f5d-43d7-b409-f488c986e8ac)
