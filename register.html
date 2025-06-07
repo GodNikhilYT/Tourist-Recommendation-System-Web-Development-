@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register - Tourism Website</title>
+    <style>
+        /* Your CSS */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDN8fG1vdW50YWluJTIwdHJhdmVsfGVufDB8fHx8MTY4MDc2ODg0Nw&auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.452);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            width: 300px;
+            text-align: center;
+        }
+
+        .form-container h2 {
+            margin-bottom: 20px;
+            color: #007BFF;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 12px 8px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+        }
+
+        .form-container button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 10px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container p {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .form-container a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <h2>Register</h2>
+
+    <form action="register_process.php" method="POST">
+        <input type="text" name="fullname" placeholder="Full Name" required><br>
+        <input type="email" name="email" placeholder="Email Address" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <input type="password" name="confirm_password" placeholder="Confirm Password" required><br>
+
+        <!-- Hidden fields for Location -->
+        <input type="hidden" name="latitude" id="latitude">
+        <input type="hidden" name="longitude" id="longitude">
+
+        <button type="submit">Register</button>
+        <button type="button" onclick="skipRegistration()">Skip</button>
+
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </form>
+</div>
+
+<script>
+    // Get User Location
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            document.getElementById("latitude").value = position.coords.latitude;
+            document.getElementById("longitude").value = position.coords.longitude;
+        }, function(error) {
+            console.log("Error getting location: ", error);
+        });
+    } else {
+        console.log("Geolocation is not supported by this browser.");
+    }
+
+    // Skip Button Function
+    function skipRegistration() {
+        window.location.href = "index.html"; // or index.html
+    }
+</script>
+
+</body>
+</html>

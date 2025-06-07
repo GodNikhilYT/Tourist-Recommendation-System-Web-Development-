@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e?ixlib=rb-4.0.3&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDEwfGNpdHl8ZW58MHx8fHwxNjgwNzY4OTY4&auto=format&fit=crop&w=1920&q=80.jpg') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.452);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 12px 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+    background-color: #0056b3;
+}
+
+.form-container p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.form-container a:hover {
+    text-decoration: underline;
+}

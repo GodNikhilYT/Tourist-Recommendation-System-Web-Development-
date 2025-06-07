@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Tourism Site</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Login to Explore</h2>
+        <form action="login_process.php" method="POST">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="password" name="password" placeholder="Password" required>
+        
+            <!-- Hidden fields for Location -->
+            <input type="hidden" name="latitude" id="latitude">
+            <input type="hidden" name="longitude" id="longitude">
+        
+            <button type="submit">Login</button>
+            <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </form>
+        
+        <script>
+            // Get User Location
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    document.getElementById("latitude").value = position.coords.latitude;
+                    document.getElementById("longitude").value = position.coords.longitude;
+                }, function(error) {
+                    console.log("Error getting location: ", error);
+                });
+            } else {
+                console.log("Geolocation is not supported by this browser.");
+            }
+        </script>
+        
+    </div>
+</body>
+</html>

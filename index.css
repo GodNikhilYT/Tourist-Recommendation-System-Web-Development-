@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the video covers the entire background */
+  z-index: -1;
+}
+
+.banner-text-item {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  font-size: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/*=============================Banner=============================*/
+.banner {
+  /* background-image: url("https://leloc90.github.io/loveTravel/assets/images/parallax-2.jpg"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  /*overflow: hidden;*/
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  /*background-size: 100%;*/
+}
+
+.banner-text-item {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-heading {
+  flex: 1;
+}
+
+.banner-heading h3 {
+  font-size: 80px;
+  font-weight: normal;
+  color: #FDE02F;
+  text-shadow: 2px 2px 4px black;
+  font-family: Satisfy;
+}
+
+.banner-text-item .form {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  width: 70%;
+  padding: 1% 2%;
+}
+
+.banner-text-item input,
+.banner-text-item .date,
+.banner-text-item .book {
+  padding: 15px;
+  margin-right: 10px;
+  font-size: 18px;
+  font-family: Roboto;
+  border-radius: 5px;
+  outline: 0;
+  border: none;
+}
+
+.banner-text-item input {
+  width: 50%;
+  flex: 2;
+}
+
+.banner-text-item .date {
+  width: 20%;
+  flex: 1;
+}
+
+.banner-text-item .book {
+  width: 20%;
+  flex: 1;
+}
+
+.banner-text-item .book {
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  padding: 15px;
+  cursor: pointer;
+  background-color: #FDE02F;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Barlow Condensed";
+  width: 20%;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999999;
+  background-color: rgba(255, 255, 255, 0.421);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 30px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: black;
+}
+
+nav a:hover {
+  background-color: #f0f0f085;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+  }
+}
+
+@media(max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+}
+
+/* ************************************************** Destinations---------------------------- */
+.section-ajeet-title {
+
+  position: relative;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  margin: 0 0 35px;
+}
+
+.gallery-sec {
+  padding: 90px 0 40px;
+  background-image: url("https://leloc90.github.io/loveTravel/assets/images/parallax-2.jpg");
+  padding-bottom: 100px;
+}
+
+.gf-column {
+  float: left;
+  display: none;
+  /* Hide all elements by default */
+}
+
+.show {
+  display: block;
+}
+
+.filter {
+  padding: 20px 2px 10px;
+  text-align: center;
+  max-width: 1050px;
+  margin: auto;
+  object-fit: cover;
+}
+
+.gf-btn {
+  padding: 10px 20px;
+  margin: 5px 4px 4px 0;
+  display: inline-block;
+  color: #000;
+  background: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  border: 1px solid #265df2;
+  text-decoration: none;
+  transition: all 0.2s;
+  border-radius: 9px;
+  cursor: pointer;
+}
+
+.gf-btn:hover,
+.gf-btn-active {
+  background: #265df2;
+  color: #fff;
+  -webkit-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  transform: translateY(3px);
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  max-width: 1320px;
+  flex-wrap: wrap;
+  margin: 25px auto;
+}
+
+.gallery img {
+  width: 200px;
+  height: 260px;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 10px 10px;
+}
+
+.gallery img:hover::after {
+  content: "E";
+}
+
+.gallery img:hover,
+video:hover {
+  transform: scale(1.1);
+}
+
+.butonsSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px 15px;
+  gap: 15px;
+}
+
+.closeBtn {
+  font-size: 22px;
+  letter-spacing: 2px;
+  color: #fff;
+  transition: all 0.4s linear;
+  padding: 8px 50px;
+  border-radius: 25px;
+  background: red;
+  border: 0;
+  outline-offset: -5px;
+  outline: 2px solid #fff;
+}
+
+.closeBtn:hover {
+  cursor: auto;
+  background: white;
+  color: black;
+  padding: 8px 45px;
+  outline-offset: 4px;
+  outline: 2px solid #fff;
+}
+
+.openDiv {
+  width: 100%;
+  height: 100vh;
+  background: #000000e7;
+  position: fixed;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  z-index: 9999;
+}
+
+.imgPreview {
+
+  object-fit: scale-down;
+  max-height: 80vh;
+  height: auto;
+}
+
+.sets .hide,
+.sets .pophide {
+  width: 0%;
+  opacity: 0;
+}
+
+.all-btn {
+  text-align: center;
+  background-color: #265df2;
+  border-radius: 30px;
+  margin: -15px auto 0;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 300px;
+  padding: 5px 10px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.all-btn:active {
+  transform: translateY(2px);
+}
+
+#showMoreImages {
+    display: inline-block;
+    background-color: #007BFF; /* Bootstrap Blue */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#showMoreImages:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+
+@media (max-width: 767px) {
+  .gallery img {
+    margin: 8px 8px;
+    width: 175px;
+  }
+
+  .closeBtn {
+    padding: 8px 25px;
+  }
+
+  .imgPreview {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (max-width: 575px) {
+  .gallery img {
+    margin: 8px 6px;
+    width: 155px;
+  }
+
+  .gf-btn {
+    font-size: 15px;
+  }
+
+  .closeBtn {
+    font-size: 18px;
+    padding: 8px 25px;
+    border-radius: 15px;
+  }
+
+  .closeBtn:hover {
+    padding: 8px 20px;
+  }
+
+  .imgPreview {
+    width: 90%;
+
+    height: auto;
+  }
+}
+ .hidden-img {
+    display: none;
+  }
+/*************************************************** inspiration Design section  **********************************/
+
+.sect-04 {
+  background: #bad2da;
+  color: rgb(7, 7, 7);
+}
+
+.sect-04 h1 {
+  /* margin: 100px 30px; */
+  padding-top: 55px;
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 3rem);
+  padding-bottom: 60px;
+}
+
+.sect-04 .cards {
+  width: 960px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin: 0px auto;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 1020px) {
+  .sect-04 .cards {
+    width: 630px;
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+
+@media screen and (max-width: 690px) {
+  .sect-04 .cards {
+    width: 300px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.sect-04 .card {
+  width: 300px;
+  height: 280px;
+  background: rgb(0, 0, 0);
+  color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 2px solid rgb(2, 2, 2);
+}
+
+.sect-04 .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 4px rgb(41, 37, 37);
+}
+
+.sect-04 .card:nth-child(even) i {
+  color: red;
+}
+
+.sect-04 .card .like-container {
+  position: absolute;
+  z-index: 1;
+  background: rgb(0, 0, 0, 0.6);
+  padding: 5px 10px;
+  backdrop-filter: blur(10px);
+}
+
+.sect-04 .card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  will-change: transform;
+  transition: transform 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.sect-04 .card:hover img {
+  transform: scale(1.05);
+}
+
+.sect-04 .card h2 {
+  margin: auto;
+}
+
+/* filter auto suggest  */
+.sect-03 {
+  font-family: sans-serif;
+  background: #eef;
+  padding: 20px;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+
+.sect-03 h2 {
+  color: #333;
+}
+
+.sect-03 .buttons {
+  margin: 15px 0;
+}
+
+.sect-03 button {
+  padding: 10px 15px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3f51b5;
+  color: white;
+  cursor: pointer;
+}
+
+.sect-03 button:hover {
+  background-color: #283593;
+}
+
+.sect-03 .place {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sect-03 .place img {
+  width: 100px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 15px;
+}
