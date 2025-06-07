@@ -14,3 +14,8 @@ Register page when visiting the website for the first time.
 ![Image](https://github.com/user-attachments/assets/50966f39-2f5d-43d7-b409-f488c986e8ac)
 
 ## STEP 2:
+After registering, now open the login page.
+
+![Image](https://github.com/user-attachments/assets/0e7dded6-f0f3-493c-9c38-95e3b12fd4f8)
+
+
