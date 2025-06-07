@@ -18,4 +18,7 @@ After registering, now open the login page.
 
 ![Image](https://github.com/user-attachments/assets/0e7dded6-f0f3-493c-9c38-95e3b12fd4f8)
 
+## STEP 3:
+Your page after login.
 
+![Image](https://github.com/user-attachments/assets/5c71ba90-a5dd-40bc-9220-0f1fa6b36001)
