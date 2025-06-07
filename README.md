@@ -28,3 +28,6 @@ Your page after login.
 # 🌤️ India Weather Analyzer & Tourist Suggestions :
 ![Image](https://github.com/user-attachments/assets/ab1544d9-3509-46c6-ae57-f6d4536aa2ef)
 
+# જ⁀➴ Location-Based Suggestions :
+![Image](https://github.com/user-attachments/assets/4067a511-7408-4d4a-9e92-8267ab6dbd26)
+
